@@ -1,0 +1,193 @@
+/* ===== Reset & Base Styles ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: #1a2343;
+    color: #fff;
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* ===== Container Styling ===== */
+.container {
+    max-width: 400px;
+    width: 100%;
+    background: #f9f9f9;
+    border-radius: 20px;
+    padding: 30px 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    color: #333;
+}
+
+/* ===== Title ===== */
+.title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #4e54c8;
+}
+
+/* ===== Coin Animation Section ===== */
+.blank-space {
+    height: 100px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.bouncing-coin {
+    width: 60px;
+    height: 60px;
+    background: #FFD700;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #C9B037;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    color: #3d370e;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    animation: moveLR 10s linear infinite, bounceUD 1s ease-in-out infinite alternate;
+}
+
+@keyframes moveLR {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: 90%;
+    }
+}
+
+@keyframes bounceUD {
+    from {
+        bottom: 0;
+    }
+    to {
+        bottom: 60%;
+    }
+}
+
+/* ===== Form Styling ===== */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+form p {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: -10px;
+}
+
+/* ===== Input Styling ===== */
+input[type="text"] {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    width: 100%;
+    outline: none;
+    transition: border 0.2s;
+}
+
+input[type="text"]:focus {
+    border-color: #4e54c8;
+}
+
+/* ===== Currency Selector Section ===== */
+.flag {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.flagbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background: #fff;
+}
+
+.flagimg {
+    height: 30px;
+    width: 30px;
+}
+
+select {
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    background: transparent;
+}
+
+/* ===== Swap Icon ===== */
+.fa-arrow-right-arrow-left {
+    font-size: 1.5rem;
+    color: #4e54c8;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.fa-arrow-right-arrow-left:hover {
+    transform: rotate(180deg);
+}
+
+/* ===== Output Text ===== */
+.val {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #444;
+    text-align: left;
+}
+
+/* ===== Button Styling ===== */
+button {
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    background-color: #4e54c8;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #3646a3;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 500px) {
+    .container {
+        max-width: 90%;
+    }
+
+    .flag {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .flagbox {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
