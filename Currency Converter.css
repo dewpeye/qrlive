@@ -38,6 +38,12 @@ body {
     color: #4e54c8;
 }
 
+#profile-pic {
+    border-radius: 50%;
+    
+
+}
+
 /* ===== Coin Animation Section ===== */
 .blank-space {
     height: 100px;
