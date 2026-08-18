@@ -38,6 +38,22 @@ body {
     color: #4e54c8;
 }
 
+.circle-container {
+  width: 200px;         /* Must be equal to height */
+  height: 200px;        /* Must be equal to width */
+  border-radius: 50%;   /* Turns the square div into a circle */
+  overflow: hidden;     /* Hides the image corners outside the circle */
+  display: flex;        /* Helps center the image */
+  justify-content: center;
+  align-items: center;
+}
+
+.circle-container img {
+  width: 100%;          /* Fills the container width */
+  height: 100%;         /* Fills the container height */
+  object-fit: cover;    /* Prevents distortion by cropping automatically */
+}
+
 /* ===== Coin Animation Section ===== */
 .blank-space {
     height: 100px;
